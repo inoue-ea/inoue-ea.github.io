@@ -19,9 +19,9 @@
    ・CSS  … 見た目（色・文字の大きさ・並べ方）。下の <style> の中に書く
    ・JavaScript … 動き（このページでは使っていません）
 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com" target="_blank" rel="noopener">
+<link rel="preconnect" href="https://fonts.gstatic.com" target="_blank" rel="noopener" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" target="_blank" rel="noopener">
 <style>
 /* 設計：アイボリーの紙に、深緑のインクと金の差し色。証券会社の「運用報告書」のような落ち着いた紙面。
    【しくみメモ】ここで色や書体に名前を付けておき（--ink など）、下ではその名前で使う。
@@ -254,7 +254,7 @@ footer .disc { max-width: 52em; }
       <a href="#videos">最新の動画</a>
       <a href="#profile">井上について</a>
       <a href="#line">ADAPT EA</a>
-      <a href="https://www.youtube.com/@元証券マンの検証EA">YouTube</a>
+      <a href="https://www.youtube.com/@元証券マンの検証EA" target="_blank" rel="noopener">YouTube</a>
     </nav>
   </header>
 
@@ -264,8 +264,8 @@ footer .disc { max-width: 52em; }
       <h1><span class="nb">実際の数字で、</span><span class="nb">相場と自動売買を</span><span class="nb">見ていきます。</span></h1>
       <p class="lead">元証券マンの井上です。僕自身の資産運用とEA運用の結果を、取引履歴や相場の背景といっしょにYouTubeでお伝えしています。良かった月も、思うようにいかなかった月も、できるだけそのままお見せするようにしています。</p>
       <div class="buttons">
-        <a class="btn main" href="https://youtu.be/ChcNC3KGDQw">最新の動画を見る</a>
-        <a class="btn sub" href="https://www.youtube.com/@元証券マンの検証EA">チャンネルを見る</a>
+        <a class="btn main" href="https://youtu.be/ChcNC3KGDQw" target="_blank" rel="noopener">最新の動画を見る</a>
+        <a class="btn sub" href="https://www.youtube.com/@元証券マンの検証EA" target="_blank" rel="noopener">チャンネルを見る</a>
       </div>
     </div>
 
@@ -306,12 +306,13 @@ footer .disc { max-width: 52em; }
   <section id="videos">
     <div class="sec-head"><h2 class="title">最新の動画</h2><span class="en">Monthly Report</span></div>
     <div class="videos">
-      <a class="video" href="https://youtu.be/ChcNC3KGDQw">
+      <!-- 【しくみメモ】target="_blank" で新しいタブで開きます。rel="noopener" は、開いた先のページから元のページを操作できないようにする安全のための決まり文句です -->
+      <a class="video" href="https://youtu.be/ChcNC3KGDQw" target="_blank" rel="noopener">
         <img src="images/thumb_btc.jpg" alt="9月のビットコイン相場解説のサムネイル" width="640" height="360">
         <div class="date">2026.09.30 ／ 相場解説</div>
         <h3>7.5万→8.7万ドル。9月のビットコインが乱高下した本当の理由</h3>
       </a>
-      <a class="video" href="https://www.youtube.com/@元証券マンの検証EA/videos">
+      <a class="video" href="https://www.youtube.com/@元証券マンの検証EA/videos" target="_blank" rel="noopener">
         <img src="images/thumb_ea.jpg" alt="9月のADAPT EA運用実績のサムネイル" width="640" height="360">
         <div class="date">2026.09.29 ／ 運用実績</div>
         <h3>損益+195万円、でもスワップ<span style="color:var(--minus)">−30万円</span>。9月のADAPT EAをMT5の取引履歴で全公開</h3>
@@ -385,7 +386,7 @@ footer .disc { max-width: 52em; }
         <h2>ADAPT EAについて詳しく知りたい方へ</h2>
         <p>ADAPT EAは、AIが相場の状況を分析してトレードを行うEAです。仕組みや始め方については、公式LINEでご案内しています。</p>
       </div>
-      <a class="btn" href="https://lin.ee/RLdofon">公式LINEはこちら</a>
+      <a class="btn" href="https://lin.ee/RLdofon" target="_blank" rel="noopener">公式LINEはこちら</a>
     </div>
   </section>
 
