@@ -72,6 +72,10 @@ body {
 a { color: inherit; }
 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
+/* 【しくみメモ】日本語の見出しを「言葉のまとまり」で改行する指定。「お／伝えしている」のような変な改行を防ぐ */
+h1, h2, h3, blockquote, .cta p, .lead, .license strong, .ledger .note { word-break: auto-phrase; text-wrap: pretty; }
+p { text-wrap: pretty; }
+
 /* ---------- 上のバー ---------- */
 .top {
   display: flex; justify-content: space-between; align-items: center; gap: 16px;
@@ -212,6 +216,22 @@ footer .disc { max-width: 52em; }
 
 /* 【しくみメモ】画面の幅が760px以下（スマホ）のときだけ効くルール。横並びを縦1列にする */
 @media (max-width: 760px) {
+  body { font-size: 15px; }
+  /* メニューは1行にして、はみ出す分は横にすべらせる */
+  .top { padding-block: 16px 0; gap: 10px; border-bottom: 0; }
+  .top nav { flex-wrap: nowrap; overflow-x: auto; gap: 4px; width: 100%; margin-inline: -8px; padding-bottom: 10px; border-bottom: 1px solid var(--line); scrollbar-width: none; }
+  .top nav::-webkit-scrollbar { display: none; }
+  .top nav a { white-space: nowrap; padding: 8px; font-size: 13px; }
+  h1 { font-size: 32px; margin: 10px 0 16px; }
+  .lead { margin-bottom: 24px; }
+  .ledger { padding: 18px 18px 14px; }
+  .ledger dd { font-size: 13px; }
+  section { padding-block: 48px; }
+  .sec-head { margin-bottom: 24px; gap: 4px 12px; }
+  h2.title { font-size: 24px; }
+  .btn { padding: 12px 18px; }
+  .donut { max-width: 260px; }
+  .license strong { font-size: 16px; }
   .hero, .about { grid-template-columns: 1fr; gap: 36px; }
   .hero { padding-block: 44px 40px; }
   .promises, .videos { grid-template-columns: 1fr; gap: 30px; }
