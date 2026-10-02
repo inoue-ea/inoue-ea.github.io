@@ -73,7 +73,9 @@ a { color: inherit; }
 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* 【しくみメモ】日本語の見出しを「言葉のまとまり」で改行する指定。「お／伝えしている」のような変な改行を防ぐ */
-h1, h2, h3, blockquote, .cta p, .lead, .license strong, .ledger .note { word-break: auto-phrase; text-wrap: pretty; }
+h1, h2, h3, blockquote, .cta p, .lead, .license strong, .ledger dd.num { font-family: var(--mono); font-size: 16px; color: var(--ink); }
+.ledger dd.minus { color: var(--minus); }
+.ledger .note { word-break: auto-phrase; text-wrap: pretty; }
 p { text-wrap: pretty; }
 
 /* ---------- 上のバー ---------- */
@@ -269,16 +271,16 @@ footer .disc { max-width: 52em; }
       </div>
     </div>
 
-    <aside class="ledger" aria-label="運用実績の見せ方">
-      <h2>運用実績の見せ方</h2>
-      <p class="period">期間：2026年9月1日〜9月30日（例）</p>
+    <!-- 【しくみメモ】毎月の数字はここを書きかえます。dt＝項目名、dd＝数字。マイナスの数字だけ class="minus" で赤にします -->
+    <aside class="ledger" aria-label="9月の運用実績">
+      <h2>9月の運用実績（ADAPT EA）</h2>
+      <p class="period">期間：2026年9月1日〜9月30日</p>
       <dl>
-        <dt>損益</dt><dd>MT5の取引履歴でお見せします</dd>
-        <dt>スワップ</dt><dd>損益とは分けてお伝えします</dd>
-        <dt>残高</dt><dd>撮影したときの口座画面です</dd>
-        <dt>途中のマイナス</dt><dd>こちらもお見せします</dd>
+        <dt>損益</dt><dd class="num">+1,953,994円</dd>
+        <dt>スワップ</dt><dd class="num minus">−300,853円</dd>
+        <dt>残高</dt><dd class="num">1,653,141円</dd>
       </dl>
-      <p class="note">過去の実績は、将来の利益を保証するものではありません。</p>
+      <p class="note">MT5の取引履歴の集計です。損益とスワップは分けて載せています。途中のマイナスの取引も含めた合計です。過去の実績は、将来の利益を保証するものではありません。</p>
     </aside>
   </div>
 
