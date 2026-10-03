@@ -2,6 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-6yaCP4uL8YRR2ESphtlCIEf7DbFiw+oUV+aQamAskMY='; style-src 'sha256-4SAUwqhB/ry68AOcXpI6NAUcewhUWmdGxc4qMbQlN24=' 'sha256-rBzr7zzaXeYDi6X3mC5ycYOW/Ws1O8pJsS1TEPO7CNc=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ADAPT EAチャンネル｜元証券マンの運用記録</title>
 <meta name="description" content="元証券マンの井上が、資産運用とEA（自動売買）の運用結果を、取引履歴や相場の背景といっしょにお伝えしているYouTubeチャンネルです。">
@@ -74,7 +76,7 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* 【しくみメモ】日本語の見出しを「言葉のまとまり」で改行する指定。「お／伝えしている」のような変な改行を防ぐ */
 h1, h2, h3, blockquote, .cta p, .lead, .license strong, .ledger dd.num { font-family: var(--mono); font-size: 16px; color: var(--ink); }
-.ledger dd.minus { color: var(--minus); }
+.minus, .ledger dd.minus { color: var(--minus); }
 .ledger .note { word-break: auto-phrase; text-wrap: pretty; }
 p { text-wrap: pretty; }
 
@@ -317,7 +319,7 @@ footer .disc { max-width: 52em; }
       <a class="video" href="https://www.youtube.com/@元証券マンの検証EA/videos" target="_blank" rel="noopener">
         <img src="images/thumb_ea.jpg" alt="9月のADAPT EA運用実績のサムネイル" width="640" height="360">
         <div class="date">2026.09.29 ／ 運用実績</div>
-        <h3>損益+195万円、でもスワップ<span style="color:var(--minus)">−30万円</span>。9月のADAPT EAをMT5の取引履歴で全公開</h3>
+        <h3>損益+195万円、でもスワップ<span class="minus">−30万円</span>。9月のADAPT EAをMT5の取引履歴で全公開</h3>
       </a>
     </div>
   </section>
